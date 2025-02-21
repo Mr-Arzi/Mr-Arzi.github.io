@@ -1,6 +1,7 @@
 # Mycv primer branch master v1
 prueba 2 de branch master v2
 preueba 1 de brach release v1
+preuba 2 de branch release v2
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
 
 ## Development server
