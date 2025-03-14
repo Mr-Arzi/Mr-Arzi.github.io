@@ -22,5 +22,7 @@ jobs:
         run: np run build
       - name: list dir
         run: ls -la
+      - name: list dir
+        run: ls -la dist/mycv
       
 
