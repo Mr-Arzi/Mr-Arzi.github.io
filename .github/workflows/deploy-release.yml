@@ -26,6 +26,6 @@ jobs:
         run: ls -la
         
       - name: list dir
-        run: ls -la dist/mycv
+        run: ls -la dist/mycv/browser
       
 
