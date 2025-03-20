@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "master"]
 jobs:
-  ci_cd_deploy_release:
+  ci_cd_deploy_master:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
