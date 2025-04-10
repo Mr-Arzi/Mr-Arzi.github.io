@@ -1,8 +1,19 @@
 <h3>Skills</h3>
-<ul *ngFor="let job of skills">
-	<li>
-		{{job.level}} <br>
-		{{job.name}}
-	</li>
-</ul>
 
+<ul *ngFor="let job of skills" style="padding: 0; list-style: none;">
+  <li style="margin-bottom: 20px;">
+    <!-- Barra de progreso -->
+    <div style="background-color: #e5e7eb; border-radius: 6px; overflow: hidden; height: 20px; width: 100%;">
+      <div 
+        [style.width.%]="job.level"
+        style="background-color: #4caf50; height: 100%; color: white; text-align: center; font-size: 0.8rem;">
+        {{ job.level }}%
+      </div>
+    </div>
+    
+    <!-- Nombre debajo -->
+    <div style="margin-top: 6px;">
+      {{ job.name }}
+    </div>
+  </li>
+</ul>
