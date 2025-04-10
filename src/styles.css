@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales para pantalla */
 body {
   margin: 0;
   padding: 0;
@@ -7,37 +7,50 @@ body {
   color: #2c3e50;
 }
 
+/* Tabla estilo tarjeta */
 table {
   width: 90%;
   max-width: 1000px;
   margin: 40px auto;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
+/* Celdas normales */
 td {
   vertical-align: top;
   padding: 20px;
-  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Encabezado que abarca todo */
+/* Encabezado principal */
 td[colspan="2"] {
-  background-color: #3498db;
+  background-color: #2d98da;
   color: white;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: bold;
   text-align: center;
   padding: 30px 20px;
+  border-bottom: none;
+  letter-spacing: 1px;
 }
 
-/* Responsive para pantallas pequeñas */
+/* Estilo para los títulos dentro de las celdas */
+td strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 17px;
+  color: #34495e;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  table,
-  tr,
-  td {
+  table, tr, td {
     display: block;
     width: 100%;
   }
@@ -53,52 +66,50 @@ td[colspan="2"] {
   }
 }
 
-/* Diseño específico para impresión en tamaño carta */
+/* Estilos para impresión */
 @media print {
   @page {
-    size: letter; /* Tamaño carta (8.5 x 11 pulgadas) */
-    margin: 10mm; /* Márgenes pequeños para ajustarse bien al papel */
+    size: letter;
+    margin: 15mm;
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    background-color: white;
+    color: #2c3e50;
   }
 
   table {
-    width: 100%; /* Tabla ocupa el 100% del ancho de la página */
-    margin: 0;
-    border: 1px solid #e0e0e0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 
   td {
-    padding: 10px; /* Ajuste de espacio dentro de las celdas */
-    font-size: 12px; /* Tamaño de texto más pequeño para caber todo */
-    border: 1px solid #e0e0e0;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
   }
 
   td[colspan="2"] {
-    background-color: #3498db;
-    color: white;
-    font-size: 18px; /* Tamaño de fuente del encabezado ajustado */
-    text-align: center;
+    background-color: #2980b9 !important;
+    color: white !important;
+    font-size: 20px;
     padding: 20px;
+    border-bottom: 2px solid #1f618d;
   }
 
-  /* Ajustar márgenes e interlineado */
-  table, tr {
-    page-break-inside: avoid; /* Evita que la tabla se divida en dos páginas */
-  }
-
-  /* Asegurar que las tablas no se corten en páginas diferentes */
-  tr {
+  /* Evitar que las filas se corten entre páginas */
+  table, tr, td {
     page-break-inside: avoid;
   }
 
-  td {
-    page-break-inside: avoid;
+  /* Estilo adicional para destacar títulos */
+  td strong {
+    color: #1a5276;
+    font-weight: bold;
+    font-size: 14px;
   }
 }
 
